@@ -1,0 +1,44 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-BJ_x9A9M.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-C0UfrOUJ.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/views/DashboardView.vue",
+      "resources/js/views/LoginView.vue"
+    ],
+    "css": [
+      "assets/app-BJ_x9A9M.css"
+    ]
+  },
+  "resources/js/views/DashboardView.vue": {
+    "file": "assets/DashboardView-9iD0pnQ0.js",
+    "name": "DashboardView",
+    "src": "resources/js/views/DashboardView.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/app-BJ_x9A9M.css"
+    ]
+  },
+  "resources/js/views/LoginView.vue": {
+    "file": "assets/LoginView-CWft5oll.js",
+    "name": "LoginView",
+    "src": "resources/js/views/LoginView.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/app-BJ_x9A9M.css"
+    ]
+  }
+}

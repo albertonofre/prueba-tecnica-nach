@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-black text-emerald-50 antialiased;
+        background-image: radial-gradient(ellipse 80% 60% at 50% -20%, rgba(16, 185, 129, 0.14), transparent);
+        background-attachment: fixed;
+    }
+}
+
+@layer components {
+    .route-enter-active,
+    .route-leave-active {
+        @apply transition-opacity duration-300 ease-in-out;
+    }
+
+    .route-enter-from,
+    .route-leave-to {
+        @apply opacity-0;
+    }
+
+    .list-enter-active,
+    .list-leave-active,
+    .list-move {
+        @apply transition-all duration-300 ease-in-out;
+    }
+
+    .list-enter-from {
+        @apply opacity-0 -translate-y-2;
+    }
+
+    .list-leave-active {
+        @apply absolute;
+    }
+
+    .list-leave-to {
+        @apply opacity-0 translate-y-2;
+    }
+
+    .modal-fade-enter-active,
+    .modal-fade-leave-active {
+        @apply transition-opacity duration-200 ease-out;
+    }
+
+    .modal-fade-enter-from,
+    .modal-fade-leave-to {
+        @apply opacity-0;
+    }
+
+    .modal-scale-enter-active {
+        @apply transition-all duration-300 ease-out;
+    }
+
+    .modal-scale-leave-active {
+        @apply transition-all duration-200 ease-in;
+    }
+
+    .modal-scale-enter-from,
+    .modal-scale-leave-to {
+        @apply opacity-0 scale-95 translate-y-2;
+    }
+
+    .panel {
+        @apply rounded-2xl border border-emerald-500/10 bg-neutral-900/70 backdrop-blur;
+        box-shadow: 0 0 32px rgba(16, 185, 129, 0.08);
+    }
+
+    .btn-primary {
+        @apply inline-flex items-center justify-center gap-1.5 rounded-lg bg-emerald-400 px-4 py-2 text-sm font-semibold text-black transition hover:bg-emerald-300 disabled:cursor-not-allowed disabled:opacity-50;
+        box-shadow: 0 0 20px rgba(52, 211, 153, 0.45);
+    }
+
+    .btn-ghost {
+        @apply inline-flex items-center justify-center gap-1.5 rounded-lg border border-emerald-500/20 px-4 py-2 text-sm font-medium text-emerald-200 transition hover:border-emerald-400/40 hover:text-emerald-100;
+    }
+
+    .input-dark {
+        @apply w-full rounded-lg border border-emerald-500/20 bg-neutral-950 px-3.5 py-2 text-sm text-emerald-50 placeholder-emerald-100/30 focus:border-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-400/60;
+    }
+
+    .chip {
+        @apply rounded-full px-3 py-1 text-xs font-medium transition;
+    }
+}
+
+@layer utilities {
+    .glow-text {
+        text-shadow: 0 0 14px rgba(52, 211, 153, 0.55), 0 0 45px rgba(52, 211, 153, 0.25);
+    }
+
+    .glow-soft {
+        box-shadow: 0 0 18px rgba(52, 211, 153, 0.18);
+    }
+
+    .glow-md {
+        box-shadow: 0 0 26px rgba(52, 211, 153, 0.35);
+    }
+}
